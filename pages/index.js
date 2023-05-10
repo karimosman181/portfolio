@@ -47,7 +47,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="hero grid h-screen place-items-center bg-red-800"></div>
+        <div className="hero grid h-screen place-items-center "></div>
         <div className="grid h-screen place-items-center bg-green-600"></div>
         <div className=" grid h-screen place-items-center bg-orange-600"></div>
         <div className="grid h-screen place-items-center bg-yellow-600"></div>
