@@ -7,6 +7,8 @@ import { useLayoutEffect, useRef, useEffect } from "react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
+import Link from "next/link";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -47,10 +49,73 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="hero grid h-screen place-items-center "></div>
+        <div className="nav-container fixed top-0 w-full ">
+          <div className="nav flex justify-end ">
+            <Link className="uppercase font-bold text-2xl  p-4" href="/contact">
+              contact me
+            </Link>
+          </div>
+        </div>
+        <div className="hero  h-screen pt-12 ">
+          <div className="hero-title-container">
+            <div className="hero-title-row-container  flex justify-center ">
+              <div className="hero-title-row flex gap-4 w-1/2 mt-5 mb-5">
+                <div className="grow title-rectangle"></div>
+                <div className=" hero-small-title uppercase font-bold">
+                  a message from earth
+                </div>
+              </div>
+            </div>
+            <div className="hero-title-row-container  flex justify-center ">
+              <div className="hero-title-row hero-title uppercase text-5xl font-bold">
+                hello fellow galaxy member
+              </div>
+            </div>
+            <div className="hero-title-row-container  flex justify-center ">
+              <div className="hero-title-row flex gap-4 w-1/2 mt-5 mb-5">
+                <div className=" hero-small-title uppercase font-bold">
+                  a message from earth
+                </div>
+                <div className="grow  title-rectangle"></div>
+              </div>
+            </div>
+          </div>
+
+          <div className="hero-content-container">
+            <div className="social-links-container">
+              <ul className="social-links pt-5">
+                <li className="social-link p-3">
+                  <Image
+                    src="/github.png"
+                    width={40}
+                    height={40}
+                    alt="Picture of the author"
+                  />
+                </li>
+                <li className="social-link  p-3">
+                  <Image
+                    src="/inst.png"
+                    width={40}
+                    height={40}
+                    alt="Picture of the author"
+                  />
+                </li>
+                <li className="social-link  p-3">
+                  <Image
+                    src="/linkin.png"
+                    width={40}
+                    height={40}
+                    alt="Picture of the author"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div className="grid h-screen place-items-center bg-green-600"></div>
         <div className=" grid h-screen place-items-center bg-orange-600"></div>
         <div className="grid h-screen place-items-center bg-yellow-600"></div>
+
         <div
           id="wrap"
           className="grid w-screen place-items-center fixed top-1/2"

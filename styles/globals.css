@@ -27,4 +27,29 @@ a {
 
 .hero {
   background-image: url("/space1.png");
+  background-color: #090909;
+}
+
+.hero-title {
+  color: #ceb7ff;
+  text-shadow: 0 0 15px #ceb7ff, 0 0 50px #ceb7ff;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ceb7ff;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-rectangle {
+
+  border: 3px solid #ceb7ff;
+  box-shadow: 0px 0px 4px #ceb7ff;
+}
+
+.hero-small-title {
+  color: #ceb7ff;
+  font-size: 16px;
+}
+
+.nav a {
+  color: #ceb7ff;
+
 }
