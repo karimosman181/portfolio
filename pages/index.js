@@ -81,34 +81,50 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-content-container">
-            <div className="social-links-container">
-              <ul className="social-links pt-5">
-                <li className="social-link p-3">
-                  <Image
-                    src="/github.png"
-                    width={40}
-                    height={40}
-                    alt="Picture of the author"
-                  />
-                </li>
-                <li className="social-link  p-3">
-                  <Image
-                    src="/inst.png"
-                    width={40}
-                    height={40}
-                    alt="Picture of the author"
-                  />
-                </li>
-                <li className="social-link  p-3">
-                  <Image
-                    src="/linkin.png"
-                    width={40}
-                    height={40}
-                    alt="Picture of the author"
-                  />
-                </li>
-              </ul>
+          <div className="hero-content-container flex">
+            <div className="hero-content-column">
+              <div className="social-links-container">
+                <ul className="social-links pt-5">
+                  <li className="social-link p-3">
+                    <Image
+                      src="/github.png"
+                      width={40}
+                      height={40}
+                      alt="Picture of the author"
+                    />
+                  </li>
+                  <li className="social-link  p-3">
+                    <Image
+                      src="/inst.png"
+                      width={40}
+                      height={40}
+                      alt="Picture of the author"
+                    />
+                  </li>
+                  <li className="social-link  p-3">
+                    <Image
+                      src="/linkin.png"
+                      width={40}
+                      height={40}
+                      alt="Picture of the author"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="hero-content-column flex gap-12 flex-col grow justify-center">
+              <div className="hero-identifier text-5xl font-bold text-center">
+                I am Karim
+              </div>
+              <div className="hero-more-info-box flex justify-center text-5xl font-bold text-center">
+                <div className="hero-more-info-text m-10">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  click to open
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -125,6 +141,25 @@ export default function Home() {
               src="/globe.png"
               width={1300}
               height={1300}
+              alt="Picture of the author"
+            />
+          </div>
+        </div>
+
+        <div className="fixed bottom-2 flex w-screen pl-9 pr-9">
+          <div className=" grow">
+            <Image
+              src="/enter.png"
+              width={60}
+              height={60}
+              alt="Picture of the author"
+            />
+          </div>
+          <div className=" grow grid justify-items-end">
+            <Image
+              src="/scroll.png"
+              width={60}
+              height={60}
               alt="Picture of the author"
             />
           </div>
