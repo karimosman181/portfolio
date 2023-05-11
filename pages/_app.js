@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import "@/styles/globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 //gsap cssplugin
 import { gsap } from "gsap";
@@ -10,9 +11,8 @@ gsap.registerPlugin(CSSPlugin);
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <main>
-        <Component {...pageProps} />
-      </main>
+      <Component {...pageProps} />
+      <Analytics />
     </>
   );
 }
