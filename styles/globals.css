@@ -30,6 +30,21 @@ a {
   background-color: #090909;
 }
 
+.skills-container {
+  background-image: url("/space2.png");
+  background-color: #090909;
+}
+
+.projects-container {
+  background-image: url("/space3.png");
+  background-color: #090909;
+}
+
+.experiences-container {
+  background-image: url("/space2.png");
+  background-color: #090909;
+}
+
 .hero-title {
   color: #ceb7ff;
   text-shadow: 0 0 15px #ceb7ff, 0 0 50px #ceb7ff;

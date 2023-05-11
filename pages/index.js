@@ -112,9 +112,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="grid h-screen place-items-center bg-green-600"></div>
-        <div className=" grid h-screen place-items-center bg-orange-600"></div>
-        <div className="grid h-screen place-items-center bg-yellow-600"></div>
+        <div className="skills-container grid h-screen place-items-center "></div>
+        <div className="projects-container grid h-screen place-items-center "></div>
+        <div className="experiences-container grid h-screen place-items-center "></div>
 
         <div
           id="wrap"
