@@ -13,30 +13,40 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   useEffect(() => {
+    var width = document.querySelector(".horizontal-container").offsetWidth;
+
+    console.log(width);
+
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.utils.toArray(".hero").forEach((hero) => {
-      var rotateOnHero = gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: hero,
-            // pin: true,
-            scrub: true,
-            markers: true,
-            start: "top top",
-            end: "+=2830",
-          },
-        })
-        .to("#green", {
-          rotation: 300,
-          duration: 5000,
-          ease: "none",
-        })
-        .to("#green", {
-          rotation: 270,
-          duration: 1000,
-          ease: "none",
-        });
+    var rotateOnHero = gsap.to("#green", {
+      rotation: 280,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".hero",
+        // pin: true,
+        scrub: 1,
+        markers: false,
+        start: "top top",
+        end: () => "+=" + width,
+      },
+    });
+
+    let sections = gsap.utils.toArray(".panel");
+
+    let scrollTween = gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: "none", // <-- IMPORTANT!
+      scrollTrigger: {
+        trigger: ".horizontal-container",
+        pin: true,
+        scrub: 1,
+        // snap: directionalSnap(1 / (sections.length - 1)),
+        invalidateOnRefresh: true,
+        snap: 1 / (sections.length - 1),
+        end: () =>
+          "+=" + document.querySelector(".horizontal-container").offsetWidth,
+      },
     });
   }, []);
 
@@ -49,88 +59,90 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="nav-container fixed top-0 w-full ">
+        <div className="nav-container fixed top-0 w-full z-10 ">
           <div className="nav flex justify-end ">
             <Link className="uppercase font-bold text-2xl  p-4" href="/contact">
               contact me
             </Link>
           </div>
         </div>
-        <div className="hero  h-screen pt-12 ">
-          <div className="hero-title-container">
-            <div className="hero-title-row-container  flex justify-center ">
-              <div className="hero-title-row flex gap-4 w-1/2 mt-5 mb-5">
-                <div className="grow title-rectangle"></div>
-                <div className=" hero-small-title uppercase font-bold">
-                  a message from earth
+        <div className="horizontal-container">
+          <div className=" panel hero  h-screen pt-12 w-screen">
+            <div className="hero-title-container">
+              <div className="hero-title-row-container  flex justify-center ">
+                <div className="hero-title-row flex gap-4 w-1/2 mt-5 mb-5">
+                  <div className="grow title-rectangle"></div>
+                  <div className=" hero-small-title uppercase font-bold">
+                    a message from earth
+                  </div>
+                </div>
+              </div>
+              <div className="hero-title-row-container  flex justify-center ">
+                <div className="hero-title-row hero-title uppercase text-5xl font-bold">
+                  hello fellow galaxy member
+                </div>
+              </div>
+              <div className="hero-title-row-container  flex justify-center ">
+                <div className="hero-title-row flex gap-4 w-1/2 mt-5 mb-5">
+                  <div className=" hero-small-title uppercase font-bold">
+                    a message from earth
+                  </div>
+                  <div className="grow  title-rectangle"></div>
                 </div>
               </div>
             </div>
-            <div className="hero-title-row-container  flex justify-center ">
-              <div className="hero-title-row hero-title uppercase text-5xl font-bold">
-                hello fellow galaxy member
-              </div>
-            </div>
-            <div className="hero-title-row-container  flex justify-center ">
-              <div className="hero-title-row flex gap-4 w-1/2 mt-5 mb-5">
-                <div className=" hero-small-title uppercase font-bold">
-                  a message from earth
-                </div>
-                <div className="grow  title-rectangle"></div>
-              </div>
-            </div>
-          </div>
 
-          <div className="hero-content-container flex">
-            <div className="hero-content-column">
-              <div className="social-links-container">
-                <ul className="social-links pt-5">
-                  <li className="social-link p-3">
-                    <Image
-                      src="/github.png"
-                      width={40}
-                      height={40}
-                      alt="Picture of the author"
-                    />
-                  </li>
-                  <li className="social-link  p-3">
-                    <Image
-                      src="/inst.png"
-                      width={40}
-                      height={40}
-                      alt="Picture of the author"
-                    />
-                  </li>
-                  <li className="social-link  p-3">
-                    <Image
-                      src="/linkin.png"
-                      width={40}
-                      height={40}
-                      alt="Picture of the author"
-                    />
-                  </li>
-                </ul>
+            <div className="hero-content-container flex">
+              <div className="hero-content-column">
+                <div className="social-links-container">
+                  <ul className="social-links pt-5">
+                    <li className="social-link p-3">
+                      <Image
+                        src="/github.png"
+                        width={40}
+                        height={40}
+                        alt="Picture of the author"
+                      />
+                    </li>
+                    <li className="social-link  p-3">
+                      <Image
+                        src="/inst.png"
+                        width={40}
+                        height={40}
+                        alt="Picture of the author"
+                      />
+                    </li>
+                    <li className="social-link  p-3">
+                      <Image
+                        src="/linkin.png"
+                        width={40}
+                        height={40}
+                        alt="Picture of the author"
+                      />
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div className="hero-content-column flex gap-12 flex-col grow justify-center">
-              <div className="hero-identifier text-5xl font-bold text-center">
-                I am Karim
-              </div>
-              <div className="hero-more-info-box flex justify-center text-5xl font-bold text-center">
-                <div className="hero-more-info-text m-10">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  click to open
+              <div className="hero-content-column flex gap-12 flex-col grow justify-center">
+                <div className="hero-identifier text-5xl font-bold text-center">
+                  I am Karim
+                </div>
+                <div className="hero-more-info-box flex justify-center text-5xl font-bold text-center">
+                  <div className="hero-more-info-text m-10">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    click to open
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div className=" panel skills-container grid h-screen place-items-center w-screen"></div>
+          <div className=" panel projects-container grid h-screen place-items-center w-screen"></div>
+          <div className=" panel experiences-container grid h-screen place-items-center w-screen"></div>
         </div>
-        <div className="skills-container grid h-screen place-items-center "></div>
-        <div className="projects-container grid h-screen place-items-center "></div>
-        <div className="experiences-container grid h-screen place-items-center "></div>
 
         <div
           id="wrap"

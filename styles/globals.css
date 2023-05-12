@@ -12,10 +12,24 @@
   margin: 0;
 }
 
+html {
+  overflow-y: scroll;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+body {
+  overflow-y: visible;
+  position: relative;
+  height: unset;
+}
+
 html,
 body {
-  max-width: 100vw;
+  /* max-width: 100vw; */
   overflow-x: hidden;
+  margin: 0;
 }
 
 
@@ -41,7 +55,7 @@ a {
 }
 
 .experiences-container {
-  background-image: url("/space2.png");
+  background-image: url("/space4.png");
   background-color: #090909;
 }
 
@@ -101,5 +115,11 @@ a {
 
 .nav a {
   color: #ceb7ff;
+}
 
+.horizontal-container {
+  width: 400%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
 }
