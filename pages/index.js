@@ -28,15 +28,21 @@ export default function Home() {
       <main>
         <Layout>
           <Hero />
+          <div className=" h-36 sm:h-10 ">&nbsp;</div>
           <Projects />
-          <div className=" h-64">&nbsp;</div>
+          <div className=" hidden sm:block sm:h-14">&nbsp;</div>
+          <div className="flex justify-center items-center content-center pt-4">
+            <Bg3Component className="hidden sm:block" />
+          </div>
+          <div className=" h-80 sm:h-10">&nbsp;</div>
           <Experience />
+
           <div className="flex justify-center items-center content-center pt-4">
             <Bg3Component />
           </div>
           <Skills />
           <div className="flex justify-center items-center content-center pt-16">
-            <Bg3Component />
+            <Bg3Component className="" />
           </div>
           <Contact />
         </Layout>

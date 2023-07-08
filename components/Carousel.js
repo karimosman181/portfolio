@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
@@ -114,8 +114,8 @@ const Carousel = () => {
   return (
     <>
       <AnimatePresence initial={false} custom={direction}>
-        <div className="flex flex-row">
-          <div className="flex w-3/4 items-center content-center justify-end">
+        <div className="flex flex-row md:flex-col">
+          <div className="flex w-3/4 sm:w-full items-center content-center justify-end">
             <motion.span
               className="border border-solid border-light rounded-full w-72 h-72 absolute opacity-100"
               initial={{ opacity: 100 }}
@@ -163,7 +163,7 @@ const Carousel = () => {
               }}
             />
           </div>
-          <div className="w-3/4">
+          <div className="w-3/4  sm:w-full">
             <motion.div
               className="flex flex-col"
               key={page}
@@ -178,7 +178,7 @@ const Carousel = () => {
               }}
             >
               <span className="block text-textCode ">{"<" + "p" + ">"}</span>
-              <div className="w-3/4 pl-10">
+              <div className="w-3/4  sm:w-full pl-10">
                 <h3 className="text-primaryDark text-3xl mb-4 font-Gugi uppercase">
                   {data[Index].title}
                 </h3>
@@ -192,19 +192,21 @@ const Carousel = () => {
           </div>
         </div>
       </AnimatePresence>
-      <div className="w-3/4 m-auto">
-        <Bg2Component className={"absolute translate-x-96 -translate-y-4"} />
-        <div className="grid grid-flow-col grid-cols-6 grid-rows-1 pt-6 translate-y-14">
-          <div className=" row-span-1 col-span-1  flex items-center justify-center content-center">
+      <div className="w-3/4 sm:w-full m-auto sm:relative">
+        <Bg2Component
+          className={"absolute translate-x-96 -translate-y-4 md:hidden "}
+        />
+        <div className="grid grid-flow-col grid-cols-6 grid-rows-1 pt-6 translate-y-14 sm:absolute sm:right-0 sm:-translate-y-16">
+          <div className=" row-span-1 col-span-1  flex items-center justify-center content-center sm:col-span-3">
             <div
-              className="next flex items-center justify-center content-center border border-solid border-light text-primaryDark rounded-full w-20 h-20"
+              className="next flex items-center justify-center content-center border border-solid border-light text-primaryDark rounded-full w-20 h-20 "
               onClick={() => paginate(1, -260)}
             >
               <span className="text-3xl leading-tight">{"<"}</span>
             </div>
           </div>
 
-          <div className="row-span-1 col-span-4 flex items-center justify-center content-center ">
+          <div className="row-span-1 col-span-4 sm:hidden flex items-center justify-center content-center ">
             <span className=" bg-textCode w-full block rounded-full">
               &nbsp;
             </span>
@@ -219,7 +221,7 @@ const Carousel = () => {
               &nbsp;
             </motion.span>
           </div>
-          <div className=" row-span-1 col-span-1  flex items-center justify-center content-center">
+          <div className=" row-span-1 col-span-1  flex items-center justify-center content-center sm:col-span-3">
             <div
               className="prev flex items-center justify-center content-center border border-solid border-light text-primaryDark rounded-full w-20 h-20"
               onClick={() => paginate(-1, 260)}

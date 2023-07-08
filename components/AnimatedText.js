@@ -40,7 +40,7 @@ const DecrytingEffect = ({ text }) => {
 
 const AnimatedText = ({ text, className = "" }) => {
   return (
-    <h1 className="text-light mt-2 mb-2 text-8xl block  max-w-lg  w-full font-Gugi uppercase tracking-widest overflow-hidden">
+    <h1 className="text-light mt-2 mb-2 text-8xl md:text-7xl sm:!text-5xl block  max-w-lg  w-full font-Gugi uppercase tracking-widest overflow-hidden">
       <DecrytingEffect text={text} />
     </h1>
   );

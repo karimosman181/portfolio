@@ -61,6 +61,57 @@ export const Bg1Component = ({ className, ...rest }) => (
   </svg>
 );
 
+export const Bg1MobileComponent = ({ className, ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={246}
+    height={352}
+    fill="none"
+    {...rest}
+    className={` ${className}`}
+  >
+    <path
+      stroke="#12ED7A"
+      strokeWidth={4}
+      d="M19.208 224.024V17.974M19 224h206.049M223.5 335.02V223.98"
+    />
+    <ellipse
+      cx={16.024}
+      cy={20.327}
+      fill="#12ED7A"
+      fillOpacity={0.29}
+      rx={16.024}
+      ry={20.327}
+      transform="matrix(.06064 -.99816 .99994 .01093 0 31.99)"
+    />
+    <ellipse
+      cx={10.874}
+      cy={14.197}
+      fill="#fff"
+      rx={10.874}
+      ry={14.197}
+      transform="matrix(.06064 -.99816 .99994 .01093 7.021 26.994)"
+    />
+    <ellipse
+      cx={16.024}
+      cy={20.327}
+      fill="#12ED7A"
+      fillOpacity={0.29}
+      rx={16.024}
+      ry={20.327}
+      transform="matrix(.06064 -.99816 .99994 .01093 203 350.989)"
+    />
+    <ellipse
+      cx={10.874}
+      cy={14.197}
+      fill="#fff"
+      rx={10.874}
+      ry={14.197}
+      transform="matrix(.06064 -.99816 .99994 .01093 210.021 345.994)"
+    />
+  </svg>
+);
+
 export const Bg2Component = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
