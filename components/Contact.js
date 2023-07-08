@@ -20,10 +20,7 @@ const Contact = () => {
       </div>
       <div className="grid  grid-rows-2 grid-cols-3 gap-4 justify-center items-center content-center">
         <div className="flex justify-center items-center content-center row-span-1 sm:col-span-3 ">
-          <Link
-            href="https://www.linkedin.com/in/karim-osman-1787821a3/"
-            target={"_blank"}
-          >
+          <Link href="https://github.com/karimosman181" target={"_blank"}>
             <GithubIcon />
           </Link>
         </div>
