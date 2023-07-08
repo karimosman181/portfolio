@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { GithubIcon, LinkedInIcon, MailIcon } from "./Icons";
 
 const Contact = () => {
@@ -19,13 +20,25 @@ const Contact = () => {
       </div>
       <div className="grid  grid-rows-2 grid-cols-3 gap-4 justify-center items-center content-center">
         <div className="flex justify-center items-center content-center row-span-1 sm:col-span-3 ">
-          <GithubIcon />
+          <Link
+            href="https://www.linkedin.com/in/karim-osman-1787821a3/"
+            target={"_blank"}
+          >
+            <GithubIcon />
+          </Link>
         </div>
         <div className=" flex justify-center items-center content-center row-span-1 sm:col-span-3 ">
-          <LinkedInIcon />
+          <Link
+            href="https://www.linkedin.com/in/karim-osman-1787821a3/"
+            target={"_blank"}
+          >
+            <LinkedInIcon />
+          </Link>
         </div>
         <div className="flex justify-center items-center content-center row-span-1 sm:col-span-3 ">
-          <MailIcon />
+          <Link href="mailto:kareemosman199@gmail.com">
+            <MailIcon />
+          </Link>
         </div>
       </div>
     </div>

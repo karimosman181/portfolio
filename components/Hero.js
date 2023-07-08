@@ -38,7 +38,9 @@ const Hero = () => {
           <div className=" w-full lg:w-44 h-auto flex items-center justify-center relative">
             <CVBgComponent className="absolute lg:hidden sm:!block sm:-translate-y-24" />
             <Link
-              href=""
+              href="/resume.pdf"
+              target={"_blank"}
+              download={true}
               className="flex 
           items-center justify-center   border border-solid border-light text-light   w-60 h-60  rounded-full font-semibold relative z-10 group text-lg 
            lg:w-32 lg:h-32 lg:text-sm sm:!w-28 sm:!h-28 sm:!text-xs"

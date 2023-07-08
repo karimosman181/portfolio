@@ -3,26 +3,27 @@ import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 import { Bg2Component } from "./Icons";
+import { portfolioImage } from "../public/portfolio.png";
 
 const data = [
   {
-    title: "COMPANY LTD",
-    tech: "next.js",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia, mauris non feugiat porttitor, enim elit fringilla dolor, id pretium risus magna sed felis. Donec consequat enim at ante dignissim aliquet. Morbi nec ante maximus, tincidunt sem eu, eleifend ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget accumsan risus, sed interdum eros. Maecenas pulvinar vehicula fermentum. Praesent eu nisl et metus pulvinar aliquam. Suspendisse potenti.",
-    src: "https://d33wubrfki0l68.cloudfront.net/dd23708ebc4053551bb33e18b7174e73b6e1710b/dea24/static/images/wallpapers/shared-colors@2x.png",
+    title: "Portfolio",
+    tech: "next.js, tailwindcss",
+    desc: "A personal portfolio website built with Next.js and Tailwind CSS with  a modern and sleek design, with a focus on showcasing my skills, and projects.",
+    src: "../portfolio.png",
   },
-  {
-    title: "COMPANY 2 LTD",
-    tech: "next.js",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia, mauris non feugiat porttitor, enim elit fringilla dolor, id pretium risus magna sed felis. Donec consequat enim at ante dignissim aliquet. Morbi nec ante maximus, tincidunt sem eu, eleifend ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget accumsan risus, sed interdum eros. Maecenas pulvinar vehicula fermentum. Praesent eu nisl et metus pulvinar aliquam. Suspendisse potenti.",
-    src: "https://d33wubrfki0l68.cloudfront.net/49de349d12db851952c5556f3c637ca772745316/cfc56/static/images/wallpapers/bridge-02@2x.png",
-  },
-  {
-    title: "COMPANY 3 LTD",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia, mauris non feugiat porttitor, enim elit fringilla dolor, id pretium risus magna sed felis. Donec consequat enim at ante dignissim aliquet. Morbi nec ante maximus, tincidunt sem eu, eleifend ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget accumsan risus, sed interdum eros. Maecenas pulvinar vehicula fermentum. Praesent eu nisl et metus pulvinar aliquam. Suspendisse potenti.",
-    tech: "next.js",
-    src: "https://d33wubrfki0l68.cloudfront.net/594de66469079c21fc54c14db0591305a1198dd6/3f4b1/static/images/wallpapers/bridge-01@2x.png",
-  },
+  // {
+  //   title: "COMPANY 2 LTD",
+  //   tech: "next.js",
+  //   desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia, mauris non feugiat porttitor, enim elit fringilla dolor, id pretium risus magna sed felis. Donec consequat enim at ante dignissim aliquet. Morbi nec ante maximus, tincidunt sem eu, eleifend ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget accumsan risus, sed interdum eros. Maecenas pulvinar vehicula fermentum. Praesent eu nisl et metus pulvinar aliquam. Suspendisse potenti.",
+  //   src: "https://d33wubrfki0l68.cloudfront.net/49de349d12db851952c5556f3c637ca772745316/cfc56/static/images/wallpapers/bridge-02@2x.png",
+  // },
+  // {
+  //   title: "COMPANY 3 LTD",
+  //   desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia, mauris non feugiat porttitor, enim elit fringilla dolor, id pretium risus magna sed felis. Donec consequat enim at ante dignissim aliquet. Morbi nec ante maximus, tincidunt sem eu, eleifend ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget accumsan risus, sed interdum eros. Maecenas pulvinar vehicula fermentum. Praesent eu nisl et metus pulvinar aliquam. Suspendisse potenti.",
+  //   tech: "next.js",
+  //   src: "https://d33wubrfki0l68.cloudfront.net/594de66469079c21fc54c14db0591305a1198dd6/3f4b1/static/images/wallpapers/bridge-01@2x.png",
+  // },
 ];
 
 const variants = {
@@ -163,7 +164,7 @@ const Carousel = () => {
               }}
             />
           </div>
-          <div className="w-3/4  sm:w-full">
+          <div className="w-3/4  sm:w-full ">
             <motion.div
               className="flex flex-col"
               key={page}
@@ -178,7 +179,7 @@ const Carousel = () => {
               }}
             >
               <span className="block text-textCode ">{"<" + "p" + ">"}</span>
-              <div className="w-3/4  sm:w-full pl-10">
+              <div className="w-3/4  sm:w-full pl-10 sm:min-h-[13rem]">
                 <h3 className="text-primaryDark text-3xl mb-4 font-Gugi uppercase">
                   {data[Index].title}
                 </h3>
