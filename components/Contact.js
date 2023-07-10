@@ -4,7 +4,7 @@ import { GithubIcon, LinkedInIcon, MailIcon } from "./Icons";
 
 const Contact = () => {
   return (
-    <div className="">
+    <div className="" id="contact">
       <div className=" w-full h-full inline-block z-0  p-34  xl:p-24 lg:p-16 md:p-12 sm:p-8 ">
         <div className=" w-7/12 m-auto sm:w-full">
           <span className=" text-textCode block w-full text-start">

@@ -195,7 +195,9 @@ const Carousel = () => {
       </AnimatePresence>
       <div className="w-3/4 sm:w-full m-auto sm:relative">
         <Bg2Component
-          className={"absolute translate-x-96 -translate-y-4 md:hidden "}
+          className={
+            "absolute translate-x-96 3xl:translate-x-[38rem]  -translate-y-4 lg:hidden "
+          }
         />
         <div className="grid grid-flow-col grid-cols-6 grid-rows-1 pt-6 translate-y-14 sm:absolute sm:right-0 sm:-translate-y-16">
           <div className=" row-span-1 col-span-1  flex items-center justify-center content-center sm:col-span-3">

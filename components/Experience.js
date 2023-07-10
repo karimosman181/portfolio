@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 
 const Experience = () => {
   return (
-    <div>
+    <div id="exp">
       <div className=" w-full h-full inline-block z-0  p-34  xl:p-24 lg:p-16 md:p-12 sm:!pt-8 sm:!pb-8 sm:!pr-1 sm:!pl-0 ">
         <div className=" w-7/12 sm:!w-full m-auto">
           <span className=" text-textCode block w-full text-start">
             {"<" + "h2" + ">"}
           </span>
-          <h1 className="text-light mt-2 mb-2 text-8xl sm:!text-4xl block    w-full font-Gugi uppercase tracking-widest text-center ">
+          <h1 className="text-light mt-2 mb-2 text-8xl text-center  md:text-6xl sm:!text-4xl block    w-full font-Gugi uppercase tracking-widest text-center ">
             Experience
           </h1>
           <span className=" text-textCode block w-full text-end">
@@ -25,7 +25,7 @@ const Experience = () => {
           transition={{ delay: 1, duration: 1 }}
         >
           <div>
-            <h2 className="font-Gugi text-6xl sm:!text-2xl">
+            <h2 className="font-Gugi text-6xl md:text-4xl sm:!text-2xl">
               S
               <span className=" group-hover:text-dark transition-[color] ease  duration-1000">
                 o
@@ -35,7 +35,7 @@ const Experience = () => {
                 o
               </span>
               per{" "}
-              <span className=" font-Press_Start_2P text-2xl sm:!text-xl">
+              <span className=" font-Press_Start_2P text-2xl  sm:!text-xl">
                 <span className=" group-hover:text-dark transition-[color] ease  duration-1000">
                   @
                 </span>{" "}
@@ -66,7 +66,7 @@ const Experience = () => {
           transition={{ duration: 1 }}
         >
           <div>
-            <h2 className="font-Gugi text-6xl sm:!text-2xl">
+            <h2 className="font-Gugi text-6xl md:text-4xl sm:!text-2xl">
               Intern{" "}
               <span className=" font-Press_Start_2P text-2xl sm:!text-xl">
                 @ Sicon Oil and gas CCC
@@ -104,7 +104,7 @@ const Experience = () => {
           transition={{ delay: 2, duration: 1 }}
         >
           <div>
-            <h2 className="font-Gugi text-6xl sm:!text-2xl">
+            <h2 className="font-Gugi text-6xl md:text-4xl sm:!text-2xl">
               Intern{" "}
               <span className=" font-Press_Start_2P text-2xl sm:!text-xl">
                 @ FIREX

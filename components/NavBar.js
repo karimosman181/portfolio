@@ -123,7 +123,7 @@ const NavBar = () => {
                 toggle={handleClick}
               />
               <MobileCustomLink
-                href="/projects"
+                href="#projects"
                 title="projects"
                 toggle={handleClick}
               />
@@ -138,13 +138,13 @@ const NavBar = () => {
       <div className="w-3/4 m-auto lg:hidden">
         <nav className=" pt-8 pb-4 grid grid-rows-2 grid-cols-6 grid-flow-col gap-6">
           <CustomLink href="/" number="1" title="HOME" />
-          <CustomLink href="/projects" number="2" title="PROJECTS" />
+          <CustomLink href="#projects" number="2" title="PROJECTS" />
 
           <div className="col-span-4 row-span-2">
             <Logo></Logo>
           </div>
-          <CustomLink href="/experience" number="3" title="EXPERIENCE" />
-          <CustomLink href="/contact" number="4" title="CONTACT" />
+          <CustomLink href="#exp" number="3" title="EXPERIENCE" />
+          <CustomLink href="#contact" number="4" title="CONTACT" />
         </nav>
       </div>
     </header>

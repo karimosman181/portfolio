@@ -38,12 +38,14 @@ module.exports = {
         textCode: "#756d6d",
       },
       screens: {
+        "3xl": {
+          min: "1649px",
+        },
         "2xl": {
           max: "1535px",
         }, // => @media(max-width:1535px)
         xl: {
-          max: "1535px",
-          min: "1279px",
+          max: "1279px",
         }, // => @media (max-width: 1279px) { ... }
         lg: {
           max: "1023px",
